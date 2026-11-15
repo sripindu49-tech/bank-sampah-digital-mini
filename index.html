@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Sampah Digital Mini</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>♻️ Bank Sampah Digital Mini</h1>
+        <p>Ubah Sampah Menjadi Tabungan</p>
+    </header>
+
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#setor">Setor Sampah</a>
+        <a href="#riwayat">Riwayat</a>
+    </nav>
+
+    <main>
+        <section id="beranda" class="dashboard">
+            <h2>Dashboard</h2>
+            <div class="saldo">
+                <p>Total Tabungan</p>
+                <h2 id="totalSaldo">Rp 0</h2>
+            </div>
+        </section>
+
+        <section id="setor" class="card">
+            <h2>Form Setor Sampah</h2>
+
+            <form id="formSampah">
+                <label>Nama Nasabah</label>
+                <input type="text" id="nama" placeholder="Masukkan nama" required>
+
+                <label>Jenis Sampah</label>
+                <select id="jenis" required>
+                    <option value="">Pilih jenis sampah</option>
+                    <option value="Plastik">Plastik</option>
+                    <option value="Kertas">Kertas</option>
+                    <option value="Kardus">Kardus</option>
+                    <option value="Besi">Besi</option>
+                    <option value="Botol">Botol</option>
+                </select>
+
+                <label>Berat Sampah (kg)</label>
+                <input type="number" id="berat" min="0.1"
+                    step="0.1" placeholder="Contoh: 2" required>
+
+                <button type="submit">Simpan Setoran</button>
+            </form>
+        </section>
+
+        <section id="riwayat" class="card">
+            <h2>Riwayat Setoran</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Jenis</th>
+                            <th>Berat</th>
+                            <th>Nilai Tabungan</th>
+                        </tr>
+                    </thead>
+                    <tbody id="daftarRiwayat">
+                    </tbody>
+                </table>
+            </div>
+
+            <button class="hapus" onclick="hapusRiwayat()">
+                Hapus Semua Riwayat
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Bank Sampah Digital Mini</p>
+        <p>Jaga Lingkungan, Raih Tabungan!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
